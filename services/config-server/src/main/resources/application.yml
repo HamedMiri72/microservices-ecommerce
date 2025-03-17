@@ -1,3 +1,5 @@
+
+# we need to store all the configurations for the future microservices that we will be implementing
 spring:
   profiles:
     active: native  # Ensure the profile is set to 'native'
