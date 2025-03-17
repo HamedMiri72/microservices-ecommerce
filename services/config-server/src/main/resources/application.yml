@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: native  # Ensure the profile is set to 'native'
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configurations  # Directory to search for configuration files
+
+
+server:
+  port: 8888
+
+
+
