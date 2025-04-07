@@ -11,9 +11,10 @@ spring:
         native:
           search-locations: classpath:/configurations  # Directory to search for configuration files
 
-
 server:
   port: 8888
+
+
 
 
 
