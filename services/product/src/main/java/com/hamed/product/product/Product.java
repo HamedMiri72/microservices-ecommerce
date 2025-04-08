@@ -1,6 +1,6 @@
 package com.hamed.product.product;
 
-
+import com.hamed.product.category.Category.Category;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,12 +15,16 @@ import java.math.BigDecimal;
 public class Product {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
+
     private String description;
-    private double availableQuantity;;
+
     private BigDecimal price;
+
+    private double availableQuantity;
 
     @ManyToOne
     @JoinColumn(name = "category-id")
