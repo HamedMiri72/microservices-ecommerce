@@ -1,5 +1,6 @@
 package com.hamed.product.product;
 
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ public class ProductController {
     private final ProductService service;
 
 
+
     @PostMapping
     public ResponseEntity<Integer> createProduct(
             @RequestBody @Valid ProductRequest request
@@ -23,23 +25,21 @@ public class ProductController {
     }
 
     @PostMapping("/purchase")
-    public ResponseEntity<List<ProductPurchaseResponse>> purchaseProduct(
-            @RequestBody List<ProductPurchaseRequest> request
+    public ResponseEntity<List<ProductPurchaseResponse>> purchaseProducts(
+            @RequestBody  List<ProductPurchaseRequest> request
     ){
         return ResponseEntity.ok(service.purchaseProducts(request));
     }
 
     @GetMapping("/{product-id}")
-    public ResponseEntity<ProductResponse> findProductById(
+    public ResponseEntity<ProductResponse> findById(
             @PathVariable("product-id") Integer productId
     ){
-        return ResponseEntity.ok(service.findProductById(productId));
+        return ResponseEntity.ok(service.findById(productId));
     }
 
     @GetMapping
-    public ResponseEntity<List<ProductResponse>> findAllProducts(
-    ) {
-        return ResponseEntity.ok(service.findAllProducts());
-
+    public ResponseEntity<List<ProductResponse>> findAll(){
+        return ResponseEntity.ok(service.findAll());
     }
 }

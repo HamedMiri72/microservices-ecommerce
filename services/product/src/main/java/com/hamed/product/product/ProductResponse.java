@@ -1,6 +1,4 @@
 package com.hamed.product.product;
 
-public record ProductResponse(
-
-) {
+public record ProductResponse() {
 }
