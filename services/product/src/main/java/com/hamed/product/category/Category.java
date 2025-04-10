@@ -1,4 +1,4 @@
-package com.hamed.product.category.Category;
+package com.hamed.product.category;
 
 import com.hamed.product.product.Product;
 import jakarta.persistence.*;

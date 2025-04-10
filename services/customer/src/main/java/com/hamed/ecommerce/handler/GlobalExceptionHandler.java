@@ -21,7 +21,6 @@ public class GlobalExceptionHandler {
                 .body(exp.getMsg());
     }
 
-    @ExceptionHandler
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handle(MethodArgumentNotValidException exp){

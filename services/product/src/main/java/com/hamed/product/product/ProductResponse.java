@@ -1,6 +1,6 @@
 package com.hamed.product.product;
 
-import com.hamed.product.category.Category.Category;
+import com.hamed.product.category.Category;
 
 import java.math.BigDecimal;
 

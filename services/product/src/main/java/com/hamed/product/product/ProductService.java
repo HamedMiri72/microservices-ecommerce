@@ -32,7 +32,7 @@ public class ProductService {
                 .map(ProductPurchaseRequest::productId)
                 .toList();
 
-        var storedProducts = repository.findAllByIdsOrderedById(productIds); // 1, 2
+        var storedProducts = repository.findAllByIdInOrderById(productIds); // 1, 2
 
         if(productIds.size() != storedProducts.size()){
             throw new ProductPurchaseException("on or more product is not available");

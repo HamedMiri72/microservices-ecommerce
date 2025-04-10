@@ -1,6 +1,6 @@
 package com.hamed.product.product;
 
-import com.hamed.product.category.Category.Category;
+import com.hamed.product.category.Category;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
